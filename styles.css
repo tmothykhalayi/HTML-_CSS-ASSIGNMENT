@@ -9,6 +9,7 @@ body {
     background-color: #fafafa;
     color: #4d4f62;
     padding: 50px 30px;
+    flex-direction: column;
 }
 
 .tech {
@@ -37,6 +38,7 @@ h1 span {
     font-size: 15px;
     line-height: 25px;
     opacity: 0.5;
+    
 }
 
 .supervisor {
