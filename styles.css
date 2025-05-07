@@ -1,78 +1,169 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* === Global Styles === */
 body {
+    background-color: #e3e5e736;
+    margin: 10%;
     font-family: 'Poppins', sans-serif;
-    background-color: #fafafa;
-    color: #4d4f62;
-    padding: 50px 30px;
+    font-weight: 400;
+  }
+  
+  .delivery {
+    display: flex;
     flex-direction: column;
-}
-
-.tech {
-    max-width: 1110px;
-    margin: 0 auto;
-}
-
-header {
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 64px;
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: 200;
-    margin-bottom: 16px;
-}
-
-h1 span {
-    font-weight: 600;
-}
-
-.power {
-    max-width: 540px;
-    margin: 0 auto;
-    font-size: 15px;
-    line-height: 25px;
-    opacity: 0.5;
-    
-}
-
-.supervisor {
+    padding: 20px;
+  }
+  
+  .delivery h2:nth-child(1) {
+    font-size: 4em;
+    font-weight: lighter;
+    color: hsl(212, 6%, 44%);
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .delivery h2:nth-child(2) {
+    font-size: 4em;
+    font-weight: bold;
+    color: hsl(230, 13%, 9%);
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .delivery p {
+    font-size: 0.5em;
+    color: hsl(212, 6%, 44%);
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  
+  .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.supervisor {
-    grid-column: 1;
-    grid-row: 13;
-    align-self: center;
-    border-radius: bold red;
-    border-top: 1px solid black;
-}
-calculator {
-    grid-column: 3;
-    grid-row: 1 / 3;
-    align-self: center;
-}
-.team-builder {
-    grid-column: 2;
-    grid-row: 1;
-}
-footer {
-    width: 100%;
-    background: none;
-    border-top: 1px solid #e0e4ea;
-    margin-top: 48px;
-    padding: 32px 0 16px;
-    text-align: center;
-    color: #a3a5ae;
-    font-size: 1rem;
-    letter-spacing: 0.01em;
-    flex-shrink: 0;
+    gap: 40px;
+    margin: auto;
+    align-items: center;
   }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: hsl(0, 78%, 62%) 5px solid; /* Default top border */
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .card img {
+    max-width: 100%;
+    border-radius: 8px;
+    align-self: flex-end;
+    margin-top: 10%;
+  }
+  
+  .card h2 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: hsl(234, 12%, 34%);
+  }
+  
+  .card p {
+    font-size: 1.5em;
+    color: hsl(212, 6%, 44%);
+  }
+  
+  .card-container .card:nth-child(1) {
+    border-top: hsl(180, 62%, 55%) 5px solid;
+  }
+  
+  .card-container .card:nth-child(3) {
+    border-top: hsl(212, 86%, 64%) 5px solid;
+  }
+  
+  .center-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .center-cards .card:nth-child(1) {
+    border-top: hsl(0, 78%, 62%) 5px solid;
+  }
+  
+  .center-cards .card:nth-child(2) {
+    border-top: hsl(34, 97%, 64%) 5px solid;
+  }
+  
+  @media (max-width: 425px) {
+    body {
+      margin: 0;
+      padding: 10px;
+    }
+  
+    .card-container {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  
+    .hero h2:nth-child(1),
+    .hero h2:nth-child(2) {
+      font-size: 2em;
+    }
+  
+    .hero p {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      margin: 10px;
+    }
+  
+    .card-container {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 10%;
+    }
+  
+    .card {
+      padding: 20px;
+      width: 100%;
+    }
+  
+    .hero h2:nth-child(1),
+    .hero h2:nth-child(2) {
+      font-size: 3em;
+    }
+  
+    .hero p {
+      font-size: 1.5em;
+    }
+  
+    .center-cards {
+      flex-direction: column;
+      gap: 50px;
+      padding: 20px;
+    }
+  }
+  
